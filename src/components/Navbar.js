@@ -24,7 +24,7 @@ export default function NavBar() {
             offset={-70}
             duration={500}
           >
-            Home
+            HOME
           </Nav.Link>
 
           <Nav.Link
@@ -36,7 +36,7 @@ export default function NavBar() {
             offset={-70}
             duration={500}
           >
-            About
+            ABOUT
           </Nav.Link>
 
           <Nav.Link
@@ -48,7 +48,7 @@ export default function NavBar() {
             offset={-70}
             duration={500}
           >
-            Contact
+            CONTACT
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
