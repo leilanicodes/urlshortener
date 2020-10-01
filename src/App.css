@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 1.3rem;
+  /* text-shadow: 2px 2px 2px white; */
+  background-color: white;
+  box-shadow: 1px 1px 2px gray;
+  margin-bottom: 2rem;
+}
+
+.nav-pills .nav-link.active {
+  /* background-color: #ffdbea; */
+  /* background-color: #d0e6fd; */
+  background-color: white;
+  /* text-decoration: underline; */
+}
+
+.navbar a.active {
+  text-decoration: underline;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #0251a4;
+}
+
+.navbar a {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-link {
+  margin: 0.1rem;
+  padding: 0;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+.nav-link:hover {
+  color: #0251a4 !important;
+  text-decoration: underline;
+}
