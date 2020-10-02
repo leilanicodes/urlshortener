@@ -42,6 +42,7 @@
   font-size: 1rem;
   background-color: white;
   box-shadow: 1px 1px 2px gray;
+  padding: 0.2rem;
   /* margin-left: 2rem; */
 }
 /* 
@@ -50,11 +51,16 @@
 } */
 
 .navbar a.active {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: #c03258 !important;
+}
+
+.navbar-nav {
+  margin-right: 10rem;
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #c03258;
 }
 
@@ -68,11 +74,76 @@
 }
 .nav-link:hover {
   color: #c03258 !important;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .navbar-brand {
   font-family: 'Luckiest Guy', cursive;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #c03258 !important;
+  margin-left: 10rem;
+  margin-top: 0.5rem;
+}
+
+#home {
+  height: 75vh;
+  /* margin-bottom: 0.5vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  /* margin-bottom: 25vh; */
+  background-image: url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  /* text-shadow: 2px 2px 2px white; */
+  /* background-color: black; */
+  color: white;
+  background-size: cover;
+  background-color: white;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 1.5rem;
+  width: auto;
+  /* padding-bottom: 2rem; */
+}
+
+#about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c03258;
+  /* border-top: 1px solid white;
+  border-bottom: 1px solid white; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.url_header {
+  padding: 1.5rem;
+  text-shadow: 1px 1px 1px #c03258;
+  font-size: 3rem;
+}
+#url_shortener {
+  width: 40rem;
+  padding-left: 1rem;
+  height: 3rem;
+  border: 1px solid #c03258;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.btn-danger:hover {
+  background-color: #972745;
+  border: 1px solid #972745;
+}
+
+.btn-danger {
+  background-color: #c03258;
+  border: 1px solid #c03258;
+  margin-bottom: 0.2rem;
+  height: 3rem;
+  width: 7rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+body {
+  font-family: ;
 }

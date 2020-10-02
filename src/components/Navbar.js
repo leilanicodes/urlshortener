@@ -18,7 +18,7 @@ export default function NavBar() {
           <Nav.Link
             eventKey={1}
             as={Link}
-            to="aboutme"
+            to="home"
             spy={true}
             smooth={true}
             offset={-70}
@@ -30,7 +30,7 @@ export default function NavBar() {
           <Nav.Link
             eventKey={2}
             as={Link}
-            to="techskills"
+            to="about"
             spy={true}
             smooth={true}
             offset={-70}
@@ -40,13 +40,9 @@ export default function NavBar() {
           </Nav.Link>
 
           <Nav.Link
-            eventKey={3}
-            as={Link}
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
+            className="contact"
+            href="https://leilanicodes.herokuapp.com/"
+            target="_blank"
           >
             CONTACT
           </Nav.Link>
