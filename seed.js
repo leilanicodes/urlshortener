@@ -8,7 +8,7 @@ async function seed() {
 
   const urls = await Promise.all([
     Url.create({
-      url: 'https://www.google.com',
+      original_url: 'https://www.google.com',
     }),
   ]);
 

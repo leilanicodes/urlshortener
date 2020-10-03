@@ -13,7 +13,7 @@ export default function Home() {
     event.preventDefault();
     axios
       .post('http://localhost:3000/url', {
-        url: url,
+        original_url: url,
       })
       .then(
         (response) => {
