@@ -11,7 +11,7 @@ module.exports = router;
 //   }
 // });
 
-router.post('/', async (req, res, next) => {
+router.post('/new', async (req, res, next) => {
   try {
     let randomStr = Math.random().toString(32).substring(2, 5);
     const newUrl = await Url.create({

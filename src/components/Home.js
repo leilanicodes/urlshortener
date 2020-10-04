@@ -12,7 +12,7 @@ export default function Home() {
   function handleUrl(event) {
     event.preventDefault();
     axios
-      .post('http://localhost:3000/url', {
+      .post('/api/new', {
         original_url: url,
       })
       .then(
