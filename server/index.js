@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json({ type: 'application/*+json' }));
 app.use(express.urlencoded({ extended: true }));
-app.use('/', require('./api'));
+app.use('/api', require('./api'));
 app.use(morgan('dev'));
 
 // if (process.env.NODE_ENV) {
