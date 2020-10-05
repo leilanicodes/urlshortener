@@ -4,20 +4,24 @@ import axios from 'axios';
 
 export default function Home() {
   const [url, setUrl] = useState('');
+  const [newUrl, setNewUrl] = useState('');
 
   function handleChange(event) {
     event.preventDefault();
     setUrl(event.target.value);
   }
-  function handleUrl(event) {
+  async function handleUrl(event) {
     event.preventDefault();
-    axios
-      .post('/api/new', {
+    await axios
+      .post('http://localhost:3000/api/new', {
         original_url: url,
       })
       .then(
         (response) => {
           console.log(response);
+          setNewUrl(
+            `https://www.pernurl.herokuapp.com/${response.data.short_url}`
+          );
         },
         (error) => {
           console.log(error);
@@ -25,8 +29,8 @@ export default function Home() {
       );
   }
   return (
-    <div>
-      <h1 class="url_header">Solve Your URL Problems Here</h1>
+    <div className="url_container">
+      <h1 className="url_header">Solve Your URL Problems Here</h1>
       <form onSubmit={handleUrl}>
         <input
           id="url_shortener"
@@ -44,6 +48,7 @@ export default function Home() {
           SHORTEN
         </Button>
       </form>
+      <div>{newUrl && <h2 className="newUrl">{newUrl}</h2>}</div>
     </div>
   );
 }

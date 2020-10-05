@@ -147,6 +147,14 @@
   width: 7rem;
   border-radius: 0 0.25rem 0.25rem 0;
 }
+.url_container {
+  position: relative;
+}
+.newUrl {
+  position: absolute;
+  margin-top: 2rem;
+  width: 100%;
+}
 /* 
 body {
   font-family: ;
