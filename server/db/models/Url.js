@@ -7,13 +7,15 @@ const Url = db.define('url', {
       allowNull: false,
       validate: {
         notEmpty: true,
+        isUrl: true,
       },
     }),
   },
   short_url: {
     type: Sequelize.STRING({
-      allowNull: true,
+      allowNull: false,
     }),
+    unique: true,
   },
 });
 

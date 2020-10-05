@@ -26,6 +26,7 @@ router.post('/new', async (req, res, next) => {
     }
     res.status(201).json(existingUrl);
   } catch (err) {
+    console.log(err);
     next(err);
   }
 });

@@ -6,6 +6,11 @@ export default function Home() {
   const [url, setUrl] = useState('');
   const [newUrl, setNewUrl] = useState('');
 
+  const homepage =
+    document.domain === 'localhost'
+      ? 'http://localhost:3000/api'
+      : 'https://pernurl.herokuapp.com/api';
+
   function handleChange(event) {
     event.preventDefault();
     setUrl(event.target.value);
@@ -18,10 +23,11 @@ export default function Home() {
       })
       .then(
         (response) => {
-          console.log(response);
-          setNewUrl(
-            `https://www.pernurl.herokuapp.com/${response.data.short_url}`
-          );
+          console.log('homepage:', homepage);
+          console.log('response:', response);
+          {
+            setNewUrl(`${homepage}/${response.data.short_url}`);
+          }
         },
         (error) => {
           console.log(error);
