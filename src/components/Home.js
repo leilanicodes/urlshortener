@@ -18,7 +18,7 @@ export default function Home() {
   async function handleUrl(event) {
     event.preventDefault();
     await axios
-      .post('http://localhost:3000/api/new', {
+      .post(`${homepage}/new`, {
         original_url: url,
       })
       .then(
