@@ -14,12 +14,17 @@ module.exports = router;
 router.post('/new', async (req, res, next) => {
   try {
     let randomStr = Math.random().toString(32).substring(2, 5);
-    const newUrl = await Url.create({
-      original_url: req.body.original_url,
-      short_url: randomStr,
+    const existingUrl = await Url.findOne({
+      where: { original_url: req.body.original_url },
     });
-    res.status(201).json(newUrl);
-    res.json(url);
+    if (!existingUrl) {
+      const newUrl = await Url.create({
+        original_url: req.body.original_url,
+        short_url: randomStr,
+      });
+      res.status(201).json(newUrl);
+    }
+    res.status(201).json(existingUrl);
   } catch (err) {
     next(err);
   }
