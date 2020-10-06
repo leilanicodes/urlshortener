@@ -34,6 +34,20 @@ export default function Home() {
         }
       );
   }
+
+  function copyUrlToClipboard() {
+    const el = document.getElementById('copiedUrl');
+    el.select();
+    document.execCommand('copy');
+    el.setSelectionRange(0, 0);
+    el.blur();
+    alert('Copied url to clipboard!');
+  }
+
+  function clear() {
+    setUrl('');
+    setNewUrl('');
+  }
   return (
     <div className="url_container">
       <h1 className="url_header">Solve Your URL Problems Here</h1>
@@ -54,7 +68,26 @@ export default function Home() {
           SHORTEN
         </Button>
       </form>
-      <div>{newUrl && <h2 className="newUrl">{newUrl}</h2>}</div>
+      <div className="newUrl_container">
+        <div>
+          {newUrl && (
+            <textarea
+              id="copiedUrl"
+              className="newUrl"
+              value={newUrl}
+              onClick={copyUrlToClipboard}
+              readonly
+            />
+          )}
+        </div>
+        <div>
+          {newUrl && (
+            <Button id="clear" variant="secondary" onClick={clear}>
+              RESET
+            </Button>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
