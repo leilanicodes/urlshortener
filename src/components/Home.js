@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 
-export default function Home() {
+export default function Home(props) {
   const [url, setUrl] = useState('');
   const [newUrl, setNewUrl] = useState('');
-
-  const homepage =
-    document.domain === 'localhost'
-      ? 'http://localhost:3000/api'
-      : 'https://pernurl.herokuapp.com/api';
 
   function handleChange(event) {
     event.preventDefault();
@@ -18,15 +13,16 @@ export default function Home() {
   async function handleUrl(event) {
     event.preventDefault();
     await axios
-      .post(`${homepage}/new`, {
+      .post(`${props.homepage}/new`, {
         original_url: url,
       })
       .then(
         (response) => {
-          console.log('homepage:', homepage);
-          console.log('response:', response);
+          //   console.log('homepage:', props.homepage);
+          //   console.log('response:', response);
           {
-            setNewUrl(`${homepage}/${response.data.short_url}`);
+            setNewUrl(`${props.homepage}/${response.data.short_url}`);
+            props.updateCount();
           }
         },
         (error) => {
@@ -62,8 +58,7 @@ export default function Home() {
           required
           onChange={handleChange}
         ></input>
-        {/* <button class="shorten_button" type="button" className="btn btn-danger">
-        </button> */}
+
         <Button type="submit" variant="danger">
           SHORTEN
         </Button>
@@ -76,7 +71,7 @@ export default function Home() {
               className="newUrl"
               value={newUrl}
               onClick={copyUrlToClipboard}
-              readonly
+              readOnly
             />
           )}
         </div>

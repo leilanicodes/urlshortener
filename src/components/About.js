@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export default function About() {
+export default function About(props) {
+  useEffect(() => {
+    props.updateCount();
+  });
+
   return (
-    <div>
-      <h1>About</h1>
+    <div className="about_container">
+      <div className="count">
+        <h1>{props.count} URLS SHORTENED BY PERN URL</h1>
+      </div>
     </div>
   );
 }
