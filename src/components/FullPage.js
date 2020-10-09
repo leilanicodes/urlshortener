@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Home, About } from '../components/index';
 import axios from 'axios';
 
-export default function FullPage(props) {
+export default function FullPage() {
   const [count, setCount] = useState(0);
+
+  // sets homepage based on whether you're on localhost or heroku
   const homepage =
     document.domain === 'localhost'
       ? 'http://localhost:3000/api'
       : 'https://pernurl.herokuapp.com/api';
 
+  // gets and sets count to number of urls
   async function updateCount() {
     const count = await axios.get(`${homepage}/count`);
 

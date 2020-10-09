@@ -191,3 +191,22 @@
   color: transparent;
   text-shadow: 0 0 0 white;
 }
+/* 
+.count_container {
+  background-image: url('https://images.unsplash.com/photo-1558419673-368b60ec0bc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  background-repeat: no-repeat;
+ 
+  background-position: center;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 100%;
+} */
+
+.video {
+  margin: 5rem;
+  border: 5px solid #c03258;
+}

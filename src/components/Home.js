@@ -8,29 +8,36 @@ export default function Home(props) {
 
   function handleChange(event) {
     event.preventDefault();
+
+    // changes url to value typed into input
     setUrl(event.target.value);
   }
   async function handleUrl(event) {
     event.preventDefault();
+
+    // posts new url to server on click onSubmit
     await axios
       .post(`${props.homepage}/new`, {
         original_url: url,
       })
       .then(
         (response) => {
-          //   console.log('homepage:', props.homepage);
-          //   console.log('response:', response);
           {
+            //sets new url display to the shortened url
             setNewUrl(`${props.homepage}/${response.data.short_url}`);
+
+            //updates count on post of new url
             props.updateCount();
           }
         },
         (error) => {
           console.log(error);
+          alert('Sorry there was an error. Please try again!');
         }
       );
   }
 
+  //selects textarea, copies it, unselects and unfocuses
   function copyUrlToClipboard() {
     const el = document.getElementById('copiedUrl');
     el.select();
@@ -40,6 +47,7 @@ export default function Home(props) {
     alert('Copied url to clipboard!');
   }
 
+  // clears form
   function clear() {
     setUrl('');
     setNewUrl('');
@@ -57,7 +65,7 @@ export default function Home(props) {
           placeholder="Paste a url here to shorten it. . ."
           required
           onChange={handleChange}
-        ></input>
+        />
 
         <Button type="submit" variant="danger">
           SHORTEN
