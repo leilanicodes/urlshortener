@@ -10,6 +10,14 @@ export default function About(props) {
 
   return (
     <div className="about_container">
+      <div className="shortener_desc">
+        <h1>MAKE YOUR LINKS SHORTER AND JUST AS POWERFUL</h1>
+        <p className="shortener_h1">
+          Do you ever want to share a url that you feel may be too long or
+          overwhelming? Well, guess what? You can shorten your urls to help save
+          space! Use the form above to try PERN URL.
+        </p>
+      </div>
       <div className="perks">
         <div>
           <FaCoffee className="coffee" />
@@ -53,7 +61,7 @@ export default function About(props) {
           src="https://www.youtube.com/embed/lSX5dPdArZ0"
         ></iframe>
         <div className="count_container">
-          <h1>{props.count}</h1>
+          <h1 className="count">{props.count}</h1>
           <div>
             <h1>URLS SHORTENED BY PERN URL</h1>
           </div>
