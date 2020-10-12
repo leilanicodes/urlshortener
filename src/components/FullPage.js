@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, About } from '../components/index';
+import { Home, About, Footer } from '../components/index';
 import axios from 'axios';
 
 export default function FullPage() {
@@ -25,6 +25,9 @@ export default function FullPage() {
       </div>
       <div id="about">
         <About homepage={homepage} updateCount={updateCount} count={count} />
+      </div>
+      <div id="footer">
+        <Footer />
       </div>
     </div>
   );

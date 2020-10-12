@@ -209,7 +209,7 @@
   flex-direction: column;
   height: 16rem;
   /* width: 50rem; */
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .video {
@@ -264,6 +264,16 @@ h1 {
 
 .count {
   font-size: 2.8rem;
+}
+
+.footer svg {
+  margin: 0.5rem;
+}
+.footer {
+  margin: 0.5rem;
+}
+.footer svg:hover {
+  color: #972745 !important;
 }
 
 body {
