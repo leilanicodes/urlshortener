@@ -63,7 +63,7 @@ export default function About(props) {
         <div className="count_container">
           <h1 className="count">{props.count}</h1>
           <div>
-            <h1>URLS SHORTENED BY PERN URL</h1>
+            <h1 className="count2">URLS SHORTENED BY PERN URL</h1>
           </div>
         </div>
       </div>

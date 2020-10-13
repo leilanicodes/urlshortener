@@ -55,7 +55,7 @@ export default function Home(props) {
   return (
     <div className="url_container">
       <h1 className="url_header">Solve Your URL Problems Here</h1>
-      <form onSubmit={handleUrl}>
+      <form className="url_form" onSubmit={handleUrl}>
         <input
           id="url_shortener"
           value={url}

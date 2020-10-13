@@ -208,6 +208,7 @@
   align-items: center;
   flex-direction: column;
   height: 16rem;
+  width: 100%;
   /* width: 50rem; */
   margin-bottom: 2rem;
 }
@@ -279,4 +280,80 @@ h1 {
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 450px) {
+  .url_header {
+    font-size: 2.5rem;
+    width: 28rem;
+  }
+  .navbar-nav {
+    margin-right: unset;
+  }
+  .navbar {
+    padding: unset;
+    max-width: 450px;
+  }
+  .navbar a {
+    margin-left: unset;
+  }
+  .navbar-brand {
+    margin-left: 0.5rem;
+  }
+
+  #url_shortener {
+    width: 20rem;
+    font-size: 1.2rem;
+    border-radius: 0.25rem;
+  }
+  #home {
+    height: 100vh;
+  }
+  .btn-danger {
+    border-radius: 0.25rem;
+    margin: 2rem;
+  }
+
+  .url_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .perks {
+    flex-direction: column;
+  }
+  .shortener_h1 {
+    width: 22rem;
+  }
+
+  .video {
+    height: 225px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video_container {
+    width: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .count_container {
+    width: unset;
+  }
+  .count2 {
+    font-size: 1.5rem;
+  }
 }
