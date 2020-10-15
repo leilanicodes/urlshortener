@@ -375,4 +375,8 @@ body {
     margin-left: 3rem;
     margin-right: 3rem;
   }
+
+  .newUrl {
+    font-size: 1.2rem;
+  }
 }
