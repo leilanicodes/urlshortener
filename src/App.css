@@ -378,5 +378,6 @@ body {
 
   .newUrl {
     font-size: 1.2rem;
+    margin: unset;
   }
 }
